@@ -1,0 +1,27 @@
+@base_url = http://localhost:8000/api
+
+GET {{base_url}}/events/
+
+### 
+
+POST {{base_url}}/events/
+Content-Type: application/json
+
+{
+    "name": "Test Event",
+    "location": "Test Location",
+    "date": "2023-01-01",
+    "description": "Test Description",
+    "max_participants": 2
+}
+
+###
+
+POST {{base_url}}/participants/
+Content-Type: application/json
+
+{
+    "event": 4,
+    "name": "Test Participant",
+    "email": "RZ6lU@example.com"
+}
